@@ -1,9 +1,11 @@
 const passwordField = document.querySelector('.password-field');
+const passInput = document.querySelector('.password-field__input');
 const lengthItem = document.querySelector('.length-item');
 const lengthRange = document.querySelector('.length-range');
 const numbers = document.querySelector('.numbers');
 const symbols = document.querySelector('.symbols');
-const btnGenerate = document.querySelector('.btn');
+const btnGenerate = document.querySelector('.btn-generate');
+const btnCopy = document.querySelector('.btn-copy');
 
 let charsNumbers = '0123456789';
 let charsSymbols = '@#$%^&*()[]';
@@ -32,11 +34,13 @@ btnGenerate.addEventListener('click', () => {
         password += charsLettes[Math.floor(Math.random() * charsLettes.length)];
        
     }
-    passwordField.innerHTML = password;
+    passInput.value = password;
 
 });
 
-// function copyText () {
-//     passwordField.select();
-//     document.execCommand('copy');
-// }
+btnCopy.addEventListener('click', () => {
+    passInput.select();
+    passInput.setSelectionRange(0, 99999);
+
+    navigator.clipboard.writeText(passInput.value);
+})

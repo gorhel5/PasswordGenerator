@@ -112,6 +112,12 @@ input[tyep=number] {
     font-size: 18px;
 }
 
+.button {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
 .btn {
     width: 300px;
     padding: 14px 30px;
@@ -132,6 +138,11 @@ input[tyep=number] {
 .btn:active {
     position: relative;
     top: 1px;
+}
+
+.password-field__input {
+    width: 100%;
+    text-align: center;
 }
 
 @media (max-width:600px) {
