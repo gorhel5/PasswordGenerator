@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.passwords-generator {
+    height: 100vh;
+    background-color: #502990;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 0;
+    width: 500px;
+    min-height: 600px;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 35px 2px rgb(45, 29, 70);
+    
+}
+.password,
+.parameters {
+    width: 400px;
+    margin-bottom: 50px;
+}
+.password-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border: 2px solid #b3b3b3;
+    border-radius: 5px;
+
+}
+
+.desc {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.length-item {
+    width: 100px;
+    height: 40px;
+    border: 1px solid #b3b3b3;
+    font-size: 16px;
+    padding-left: 10px;
+    outline: none;
+    margin-right: 10px;
+}
+
+.length-item:focus {
+    border: 1px solid #502990;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+
+    -webkit-appearance: none;
+    margin: 0;
+
+}
+
+input[tyep=number] {
+    -moz-appearance: textfield;
+}
+
+
+.length-range {
+    width: 200px;
+    height: 8px;
+    -webkit-appearance: none;
+    border-radius: 5px;
+    background-color:#b3b3b3 ;
+    outline: none;
+    margin: 20px 0 10px;
+}
+
+.length-range::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    background-color: #502990;
+    margin: 0;
+    cursor: pointer;
+}
+.checkbox {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 20px;
+}
+.parameter {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+.checkbox__input {
+    width: 20px;
+    height: 20px;
+}
+.checkbox__label {
+    font-size: 18px;
+}
+
+.btn {
+    width: 300px;
+    padding: 14px 30px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: all 0.5s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn:active {
+    position: relative;
+    top: 1px;
+}
+
+@media (max-width:600px) {
+    .container {
+        width: 350px;
+    }
+
+    .password,
+    .parameters {
+        width: 320px;
+        margin-bottom: 50px;
+    }
+
+    .password-field {
+        font-size: 14px;
+    }
+}
